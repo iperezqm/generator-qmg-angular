@@ -1,0 +1,14 @@
+{
+  "name": "generator-qmg-angular",
+  "version": "1.0.0",
+  "description": "",
+  "files": [
+    "app"
+  ],
+  "keywords": [
+    "yeoman-generator"
+  ],
+  "dependencies": {
+    "yeoman-generator": "^0.22.2"
+  }
+}

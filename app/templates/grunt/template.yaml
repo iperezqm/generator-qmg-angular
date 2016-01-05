@@ -1,0 +1,44 @@
+index.html.template:
+    options:
+        data: &DEFAULT_DATA
+            googleTagManagerId: "{{stack.lookup('properties.<%= gtmPropertyName %>')}}"
+            generatedFileWarning: "<!-- This file is generated from index.html.tpl via grunt template -->"
+    files:
+        "dist/index.html.template":
+            - "index.html.tpl"
+
+index.html:
+    options:
+        data:
+            <<: *DEFAULT_DATA
+            googleTagManagerId: "<%= gtmLocalId %>"
+    files:
+        "dist/index.html":
+            - "index.html.tpl"
+
+config.template:
+    options:
+        data: &DEFAULT_DATA
+            generatedFileWarning: "// This file is generated from config.tpl via grunt template"
+            googleTagManagerId: "{{stack.lookup('properties.<%= gtmPropertyName %>')}}"
+    files:
+        config.template:
+            - "config.tpl"
+
+config.js:
+    options:
+        data:
+            <<: *DEFAULT_DATA
+            googleTagManagerId: "<%= gtmLocalId %>"
+    files:
+        "dist/js/config.js":
+            - "config.tpl"
+
+unit:
+    options:
+        data:
+            <<: *DEFAULT_DATA
+            googleTagManagerId: "GTM-TESTING"
+    files:
+        "dist/js/config-unit-tests.js":
+            - "config.tpl"

@@ -1,0 +1,8 @@
+options:
+  module: "<%= angularModule %>.core"
+
+app:
+  cwd: "./app/js"
+  src: "**/*.tpl.html"
+  dest: "./dist/js/templates.js"
+  standalone: false

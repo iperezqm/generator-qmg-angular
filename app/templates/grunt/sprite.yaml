@@ -1,0 +1,7 @@
+all:
+    src:
+        - "./img/**/*.png"
+        - "./shared-assets/**/*.png"
+    dest: "./dist/img/<%= projectId %>.png"
+    destCss: "./dist/less/sprites.less"
+    padding: 1

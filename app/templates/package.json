@@ -1,0 +1,11 @@
+{
+  "name": "<%= projectId %>",
+  "description": "<%= projectDescription %>",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "grunt test"
+  },
+  "dependencies": {
+    "qmg-angular": "github:iperezqm/qmg-angular"
+  }
+}

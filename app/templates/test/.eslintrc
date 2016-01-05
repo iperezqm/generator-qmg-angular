@@ -1,0 +1,16 @@
+{
+  "env": {
+    "node": true,
+    "mocha": true,
+    "jquery": true
+  },
+  "rules": {
+    "no-unused-expressions": 0
+  },
+  "globals": {
+    "sinon": true,
+    "expect": true,
+    "inject": true,
+    "angular": true
+  }
+}

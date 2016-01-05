@@ -1,0 +1,11 @@
+#! /usr/bin/env bash
+
+UNAME=`uname`
+
+if [[ "$UNAME" == 'Darwin' ]]; then
+    PHANTOMJS=`which phantomjs`
+else
+    PHANTOMJS=/usr/local/bin/phantomjs
+fi
+
+$PHANTOMJS $@

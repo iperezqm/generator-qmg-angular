@@ -1,0 +1,12 @@
+{
+    "env": {
+        "browser": true
+    },
+    "globals": {
+        "angular": true,
+        "$": true
+    },
+    "rules": {
+        "no-unused-expressions": 2
+    }
+}

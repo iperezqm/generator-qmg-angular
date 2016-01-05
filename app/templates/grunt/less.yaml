@@ -1,0 +1,9 @@
+<%= projectId %>:
+    options:
+        strictMath: true
+        sourceMap: true
+        outputSourceFiles: true
+        sourceMapURL: '<%= projectId %>.css.map'
+        sourceMapFilename: 'dist/css/<%= projectId %>.css.map'
+    src: 'less/<%= projectId %>.less'
+    dest: 'dist/css/<%= projectId %>.css'
