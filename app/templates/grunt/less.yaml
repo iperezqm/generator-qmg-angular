@@ -5,5 +5,5 @@
         outputSourceFiles: true
         sourceMapURL: '<%= projectId %>.css.map'
         sourceMapFilename: 'dist/css/<%= projectId %>.css.map'
-    src: 'less/<%= projectId %>.less'
+    src: 'less/main.less'
     dest: 'dist/css/<%= projectId %>.css'

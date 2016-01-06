@@ -42,3 +42,11 @@ unit:
     files:
         "dist/js/config-unit-tests.js":
             - "config.tpl"
+
+dyson.json:
+    options:
+        data:
+            proxyPort: "<%%= connect.e2e.options.port %>"
+    files:
+        "test/dist/dyson/services/dyson.json":
+            - "dyson/services/dyson.json"
