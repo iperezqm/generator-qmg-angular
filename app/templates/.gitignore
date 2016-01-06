@@ -1,0 +1,14 @@
+bower_components
+node_modules
+.idea/
+dist
+phantomjsdriver.log
+config.js
+config.template
+node
+test/failures
+coverage
+test/libs/jacocoagent.jar
+.lvimrc
+Session.vim
+.DS_Store

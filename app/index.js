@@ -23,6 +23,11 @@ module.exports = generators.Base.extend({
             name: 'projectDescription',
             message: 'Project short description',
             default: 'QMG Angular Project'
+        },
+        {
+            name: 'applicationTitle',
+            message: 'Application default page title',
+            default: 'Angular Application'
         }, {
             name: 'outfileName',
             message: 'Base filename for css and sprite output',
