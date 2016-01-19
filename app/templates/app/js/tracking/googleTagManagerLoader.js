@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('<%= angularModule %>.core').service('googleTagManagerLoader', ($window, $document, configuration) => ({
+angular.module('<%= angularModule %>.googleTagManager', ['angulartics.google.tagmanager']).service('googleTagManagerLoader', ($window, $document, configuration) => ({
     run: () => {
         /* eslint-disable */
         (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':

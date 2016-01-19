@@ -27,8 +27,8 @@ angular.module('<%= angularModule %>.router').config(($analyticsProvider) => {
 });
 
 angular.module('<%= angularModule %>.router').run(($rootScope, $timeout, $analytics, $state) => {
+    $rootScope.state = $state;
     $rootScope.$on('$stateChangeSuccess', () => {
-        $rootScope.state = $state;
         $timeout(() => $analytics.pageTrack($state.current.data.trackUrl || $state.current.url));
     });
 });
@@ -39,11 +39,10 @@ angular.module('<%= angularModule %>.core', [
     'angular-momentjs',
     'ui.bootstrap',
     'ui.mask',
-    'angulartics',
-    'angulartics.google.tagmanager'
+    '<%= angularModule %>.tracking'
 ]);
 
-angular.module('<%= angularModule %>', ['<%= angularModule %>.core', '<%= angularModule %>.router', 'angulartics.google.tagmanager']).run(($rootScope, $window, googleTagManagerLoader) => {
+angular.module('<%= angularModule %>', ['<%= angularModule %>.core', '<%= angularModule %>.router', '<%= angularModule %>.googleTagmanager']).run(($rootScope, $window, googleTagManagerLoader) => {
     googleTagManagerLoader.run();
 
     $rootScope.$on('$viewContentLoaded', () => {
