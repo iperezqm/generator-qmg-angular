@@ -18,7 +18,7 @@ module.exports = generators.Base.extend({
         this.prompt([{
             name: 'projectId',
             message: 'Project Id',
-            default: this.appname
+            default: this.appname.replace(/[\s_]/g, '-')
         }, {
             name: 'projectDescription',
             message: 'Project short description',

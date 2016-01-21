@@ -42,7 +42,7 @@ angular.module('<%= angularModule %>.core', [
     '<%= angularModule %>.tracking'
 ]);
 
-angular.module('<%= angularModule %>', ['<%= angularModule %>.core', '<%= angularModule %>.router', '<%= angularModule %>.googleTagmanager']).run(($rootScope, $window, googleTagManagerLoader) => {
+angular.module('<%= angularModule %>', ['<%= angularModule %>.core', '<%= angularModule %>.router', '<%= angularModule %>.googleTagManager']).run(($rootScope, $window, googleTagManagerLoader) => {
     googleTagManagerLoader.run();
 
     $rootScope.$on('$viewContentLoaded', () => {

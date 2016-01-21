@@ -1,5 +1,0 @@
-{
-    "proxy": true,
-    "proxyHost": "http://localhost",
-    "proxyPort": "<%%= proxyPort %>"
-}

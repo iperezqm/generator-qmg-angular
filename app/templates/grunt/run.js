@@ -9,7 +9,8 @@ var extend = require('extend');
 var dyson = {
     args: [
         'node_modules/.bin/dyson',
-        'test/dist/dyson/services'
+        'test/dist/dyson/services',
+        '<%%= freeport.dyson %>'
     ],
     options: {
         wait: false,
@@ -25,24 +26,17 @@ var dysonTest = {
 dysonTest.args.push('<%%= freeport.dyson %>');
 
 var service = {
-    cmd: 'java',
+    cmd: 'node_modules/.bin/http-server',
     args: [
-          '-jar',
-          '-Ddw.assets.overrides./=' + webDistPath,
-          '-Ddw.shiroConfigLocations=classpath:shiro_ci.ini',
-          '-Ddw.server.applicationConnectors[0].port=<%%= freeport.service %>',
-          '-Ddw.server.adminConnectors[0].port=<%%= freeport.serviceAdmin %>',
-          '-Ddw.customerDataEndpointUrl=http://localhost:<%%= freeport.dyson %>/',
-          '-Ddw.customerFolderUrl=http://localhost:<%%= freeport.dyson %>/customer-folder',
-          '-Ddw.emailFeedUrl=http://localhost:<%%= freeport.dyson %>/feed',
-          'one-account-service.jar',
-          'server',
-          './classes/config.yaml'
+          'dist',
+          '-p',
+          '<%%= freeport.service %>',
+          '--silent',
+          '--proxy',
+          'http://localhost:<%%= freeport.dyson %>'
       ],
     options: {
-        cwd: '../service/target',
-        wait: false,
-        ready: 2000
+        wait: false
     }
 };
 
