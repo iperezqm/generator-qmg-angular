@@ -2,7 +2,6 @@
 
 var fs = require('fs');
 var path = require('path');
-var User = require('./page_objects/User');
 
 var screenshotDescriptions = [];
 var screenshotIndex = 0;
@@ -63,7 +62,6 @@ before(() => {
 });
 
 afterEach(function() {
-    User.killSession();
     browser.manage().logs().get('browser').then((browserLog) => {
         if (browserLog.length) {
             logs.push(`File: ${this.currentTest.file}`);

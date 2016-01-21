@@ -2,8 +2,6 @@
 
 'use strict';
 
-var path = require('path');
-var webDistPath = path.resolve(__dirname, '../dist');
 var extend = require('extend');
 
 var dyson = {
@@ -47,7 +45,7 @@ module.exports = {
     dyson_test: dysonTest,
     dyson_ci: extend(DEEP, {}, dysonTest, { options: { quiet: false } }),
     service: service,
-    service_coverage: extend(DEEP, {}, service, { args: [ '-javaagent:../../web/test/libs/jacocoagent.jar=destfile=integration-coverage.coco' ].concat(service.args) }),
+    service_coverage: service,
     waitToBootstrap: {
         cmd: 'sleep',
         args: [
