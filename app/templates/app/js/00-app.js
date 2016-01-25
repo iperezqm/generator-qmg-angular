@@ -39,10 +39,10 @@ angular.module('<%= angularModule %>.core', [
     'angular-momentjs',
     'ui.bootstrap',
     'ui.mask',
-    '<%= angularModule %>.tracking'
+    'QMetric.tracking'
 ]);
 
-angular.module('<%= angularModule %>', ['<%= angularModule %>.core', '<%= angularModule %>.router', '<%= angularModule %>.googleTagManager']).run(($rootScope, $window, googleTagManagerLoader) => {
+angular.module('<%= angularModule %>', ['<%= angularModule %>.core', '<%= angularModule %>.router', 'QMetric.googleTagManager']).run(($rootScope, $window, googleTagManagerLoader) => {
     googleTagManagerLoader.run();
 
     $rootScope.$on('$viewContentLoaded', () => {

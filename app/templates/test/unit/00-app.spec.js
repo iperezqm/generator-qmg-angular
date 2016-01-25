@@ -30,7 +30,7 @@ describe('tracking', () => {
         beforeEach(() => {
             googleTagManagerRun = sinon.spy();
 
-            angular.module('<%= angularModule %>.googleTagManager', []).service('googleTagManagerLoader', () => ({
+            angular.module('QMetric.googleTagManager', []).service('googleTagManagerLoader', () => ({
                 run: googleTagManagerRun
             }));
 
